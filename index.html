@@ -44,51 +44,48 @@
     }
     .vision-label { font-size: 10px; letter-spacing: 0.25em; color: rgba(255,255,255,0.4); text-transform: uppercase; }
     .vision-line { width: 40px; height: 0.5px; background: rgba(255,255,255,0.25); }
-    .vision p {
-      font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300;
-      color: #fff; line-height: 1.7; max-width: 700px; letter-spacing: 0.03em; font-style: italic;
-    }
+    .vision p { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #fff; line-height: 1.7; max-width: 700px; letter-spacing: 0.03em; font-style: italic; }
 
-    /* ── ABOUT ── */
-    .about { background: #0d1b4b; display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
-    .about-image { width: 100%; height: 100%; min-height: 500px; object-fit: cover; }
-    .about-text { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
-    .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 400; color: #fff; margin-bottom: 8px; }
-    .about-text p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.85); font-weight: 300; }
+    /* ── ABOUT — tighter sizing ── */
+    .about { background: #0d1b4b; display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
+    .about-image { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
+    .about-text { padding: 52px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 4px; }
+    .about-text p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.82); font-weight: 300; }
 
-    /* ── GOALS ── */
-    .goals { position: relative; display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; overflow: hidden; }
+    /* ── GOALS — square image ── */
+    .goals { position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
     .goals-bg {
       position: absolute; inset: 0;
       background-image: url('about.jpg');
       background-size: cover; background-position: center; filter: brightness(0.3);
     }
-    .goals-left { position: relative; z-index: 2; padding: 60px 48px; display: flex; flex-direction: column; justify-content: flex-start; }
-    .goals-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; color: #fff; margin-bottom: 32px; }
-    .goal-item { padding: 18px 0; border-top: 0.5px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; gap: 8px; }
+    .goals-left { position: relative; z-index: 2; padding: 52px 48px; display: flex; flex-direction: column; justify-content: flex-start; }
+    .goals-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 28px; }
+    .goal-item { padding: 16px 0; border-top: 0.5px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; gap: 7px; }
     .goal-item:last-child { border-bottom: 0.5px solid rgba(255,255,255,0.15); }
     .goal-num-title { display: flex; align-items: baseline; gap: 14px; }
     .goal-num { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.15em; }
-    .goal-title { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 400; color: #fff; }
-    .goal-body { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.65); font-weight: 300; padding-left: 28px; }
-    .goals-right { position: relative; z-index: 2; padding: 60px 48px 60px 0; display: flex; align-items: center; }
-    .goals-right img { width: 100%; height: 320px; object-fit: cover; }
+    .goal-title { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; color: #fff; }
+    .goal-body { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.65); font-weight: 300; padding-left: 28px; }
+    .goals-right { position: relative; z-index: 2; padding: 52px 48px 52px 0; display: flex; align-items: center; }
+    .goals-right img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
-    /* ── WHAT WE LOOK FOR ── */
+    /* ── WHAT WE LOOK FOR — industries LEFT, text RIGHT ── */
     .lookfor { position: relative; overflow: hidden; }
     .lookfor-bg {
       position: absolute; inset: 0;
       background-image: url('strategy-bg.jpg');
       background-size: cover; background-position: center; filter: brightness(0.3);
     }
-    .lookfor-inner { position: relative; z-index: 2; padding: 72px 60px; }
-    .lookfor-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 400; color: #fff; text-align: center; margin-bottom: 48px; }
+    .lookfor-inner { position: relative; z-index: 2; padding: 64px 60px; }
+    .lookfor-inner h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; text-align: center; margin-bottom: 40px; }
     .lookfor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-    .lookfor-text p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 20px; text-align: center; }
-    .industries h3 { font-size: 18px; font-family: 'Cormorant Garamond', serif; font-weight: 400; color: #fff; margin-bottom: 20px; letter-spacing: 0.04em; }
+    .industries h3 { font-size: 16px; font-family: 'Cormorant Garamond', serif; font-weight: 400; color: #fff; margin-bottom: 20px; letter-spacing: 0.04em; }
     .industries ul { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .industries ul li { font-size: 14px; color: rgba(255,255,255,0.75); font-weight: 300; padding-left: 16px; }
+    .industries ul li { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 300; padding-left: 16px; }
     .industries ul li::before { content: '• '; color: rgba(255,255,255,0.4); }
+    .lookfor-text p { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 18px; }
 
     /* ── WHY SELLERS + FOR BROKERS ── */
     .why-brokers { position: relative; overflow: hidden; }
@@ -97,21 +94,15 @@
       background-image: url('strategy.jpg');
       background-size: cover; background-position: center; filter: brightness(0.25);
     }
-    .why-brokers-inner { position: relative; z-index: 2; padding: 72px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .why-brokers-inner { position: relative; z-index: 2; padding: 64px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
     .why-col h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: #fff; margin-bottom: 28px; }
     .why-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-    .why-list li { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.65; display: flex; gap: 12px; align-items: flex-start; }
+    .why-list li { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 300; line-height: 1.65; display: flex; gap: 12px; align-items: flex-start; }
     .why-list li::before { content: '✓'; color: rgba(255,255,255,0.5); font-size: 13px; margin-top: 2px; flex-shrink: 0; }
     .broker-col h2 { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: #fff; margin-bottom: 28px; }
     .broker-box { background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.18); padding: 28px 32px; }
-    .broker-box p { font-size: 14px; line-height: 1.85; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 24px; }
-    .broker-btn {
-      display: inline-block; padding: 12px 32px;
-      border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.85);
-      font-family: 'Montserrat', sans-serif; font-size: 11px;
-      letter-spacing: 0.14em; text-decoration: none;
-      background: transparent; transition: background 0.2s, color 0.2s;
-    }
+    .broker-box p { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 24px; text-align: left; }
+    .broker-btn { display: inline-block; padding: 12px 32px; border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.85); font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-decoration: none; background: transparent; transition: background 0.2s; }
     .broker-btn:hover { background: rgba(255,255,255,0.1); }
 
     /* ── CTA ── */
@@ -134,35 +125,27 @@
     @media (max-width: 768px) {
       nav { padding: 14px 20px; flex-direction: column; gap: 10px; }
       nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
-
       .hero h1 { font-size: 36px; letter-spacing: 0.12em; }
       .hero .tagline { font-size: 16px; }
       .hero-logo { width: 120px; }
-
       .vision { padding: 48px 28px; }
       .vision p { font-size: 20px; }
-
       .about { grid-template-columns: 1fr; }
-      .about-image { min-height: 280px; }
-      .about-text { padding: 48px 28px; }
-      .about-text h2 { font-size: 36px; }
-
+      .about-image { min-height: 260px; }
+      .about-text { padding: 40px 28px; }
+      .about-text h2 { font-size: 34px; }
       .goals { grid-template-columns: 1fr; }
-      .goals-left { padding: 48px 28px; }
-      .goals-left h2 { font-size: 36px; }
+      .goals-left { padding: 40px 28px; }
+      .goals-left h2 { font-size: 34px; }
       .goals-right { display: none; }
-
-      .lookfor-inner { padding: 48px 28px; }
-      .lookfor-inner h2 { font-size: 36px; }
+      .lookfor-inner { padding: 40px 28px; }
+      .lookfor-inner h2 { font-size: 34px; }
       .lookfor-grid { grid-template-columns: 1fr; gap: 32px; }
-
-      .why-brokers-inner { padding: 48px 28px; grid-template-columns: 1fr; gap: 40px; }
+      .why-brokers-inner { padding: 40px 28px; grid-template-columns: 1fr; gap: 40px; }
       .why-col h2, .broker-col h2 { font-size: 28px; }
-
       .cta-box { padding: 40px 28px; margin: 0 20px; }
       .cta-box h2 { font-size: 28px; }
       .cta-btn { padding: 14px 32px; }
-
       footer { flex-direction: column; gap: 24px; padding: 40px 28px; text-align: center; }
       .footer-right { text-align: center; }
     }
@@ -247,10 +230,6 @@
     <div class="lookfor-inner">
       <h2>What We Look For</h2>
       <div class="lookfor-grid">
-        <div class="lookfor-text">
-          <p>We acquire established, profitable service businesses — primarily in Southern California, with select remote or national businesses where the model supports it. Our focus is on companies with strong teams, transferable customer relationships, and a track record of consistent performance.</p>
-          <p>We hold businesses for the long term. We are not flipping, rolling up for a private equity exit, or optimizing for a short-term return. Retiring owners deserve a buyer who respects their legacy — we take the handoff seriously and invest in making businesses stronger, not just larger.</p>
-        </div>
         <div class="industries">
           <h3>Industries We Focus On</h3>
           <ul>
@@ -261,6 +240,10 @@
             <li>Healthcare-Adjacent Services</li>
             <li>Specialty Logistics</li>
           </ul>
+        </div>
+        <div class="lookfor-text">
+          <p>We acquire established, profitable service businesses — primarily in Southern California, with select remote or national businesses where the model supports it. Our focus is on companies with strong teams, transferable customer relationships, and a track record of consistent performance.</p>
+          <p>We hold businesses for the long term. We are not flipping, rolling up for a private equity exit, or optimizing for a short-term return. Retiring owners deserve a buyer who respects their legacy — we take the handoff seriously and invest in making businesses stronger, not just larger.</p>
         </div>
       </div>
     </div>
