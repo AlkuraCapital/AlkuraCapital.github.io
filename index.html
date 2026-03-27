@@ -46,21 +46,17 @@
     .vision-line { width: 40px; height: 0.5px; background: rgba(255,255,255,0.25); }
     .vision p { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #fff; line-height: 1.7; max-width: 700px; letter-spacing: 0.03em; font-style: italic; }
 
-    /* ── ABOUT — contained square image with margins ── */
+    /* ── ABOUT — image proportional to paragraph, padding all edges ── */
     .about {
       background: #0d1b4b;
       display: grid; grid-template-columns: 1fr 1fr;
-      align-items: center; padding: 60px 60px;
-      gap: 60px;
+      align-items: center; min-height: 420px;
     }
-    .about-image-wrap { padding: 0; }
-    .about-image {
-      width: 100%; aspect-ratio: 1 / 1;
-      object-fit: cover; display: block;
-    }
-    .about-text { display: flex; flex-direction: column; gap: 18px; }
+    .about-image-wrap { padding: 40px 24px 40px 40px; }
+    .about-image { width: 100%; height: 320px; object-fit: cover; display: block; }
+    .about-text { padding: 40px 48px 40px 24px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
     .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 4px; }
-    .about-text p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.82); font-weight: 300; }
+    .about-text p { font-size: 13px; line-height: 1.82; color: rgba(255,255,255,0.82); font-weight: 300; }
 
     /* ── GOALS — image matches text height ── */
     .goals { position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
@@ -80,35 +76,17 @@
     .goals-right { position: relative; z-index: 2; padding: 52px 48px 52px 0; display: flex; align-items: stretch; }
     .goals-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* ── WHAT WE LOOK FOR — title left, industries boxed right ── */
+    /* ── WHAT WE LOOK FOR ── */
     .lookfor { background: #0d1b4b; padding: 72px 60px; }
-    .lookfor h2 {
-      font-family: 'Cormorant Garamond', serif; font-size: 42px;
-      font-weight: 400; color: #fff; text-align: left; margin-bottom: 40px;
-    }
-    .lookfor-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 60px; align-items: start;
-    }
-    .lookfor-text p {
-      font-size: 13px; line-height: 1.85;
-      color: rgba(255,255,255,0.8); font-weight: 300;
-      margin-bottom: 20px; text-align: left;
-    }
+    .lookfor h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; text-align: left; margin-bottom: 40px; }
+    .lookfor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: start; }
+    .lookfor-text { padding-right: 60px; }
+    .lookfor-text p { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.8); font-weight: 300; margin-bottom: 20px; text-align: left; }
     .lookfor-text p:last-child { margin-bottom: 0; }
-    .industries {
-      border: 0.5px solid rgba(255,255,255,0.25);
-      padding: 32px 36px;
-    }
-    .industries h3 {
-      font-family: 'Cormorant Garamond', serif; font-size: 22px;
-      font-weight: 400; color: #fff; margin-bottom: 24px; letter-spacing: 0.04em;
-    }
+    .industries { border: 0.5px solid rgba(255,255,255,0.25); padding: 32px 36px; }
+    .industries h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: #fff; margin-bottom: 24px; letter-spacing: 0.04em; }
     .industries ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-    .industries ul li {
-      font-size: 13px; color: rgba(255,255,255,0.75);
-      font-weight: 300; display: flex; align-items: center; gap: 10px;
-    }
+    .industries ul li { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 300; display: flex; align-items: center; gap: 10px; }
     .industries ul li::before { content: '—'; color: rgba(255,255,255,0.35); font-size: 12px; }
 
     /* ── WHY SELLERS + FOR BROKERS ── */
@@ -129,7 +107,7 @@
     .broker-btn { display: inline-block; padding: 12px 32px; border: 1px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.85); font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-decoration: none; background: transparent; transition: background 0.2s; }
     .broker-btn:hover { background: rgba(255,255,255,0.1); }
 
-    /* ── CTA ── */
+    /* ── CTA — original light frosted box ── */
     .cta { position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center; }
     .cta-bg { position: absolute; inset: 0; background-image: url('cta-bg.jpg'); background-size: cover; background-position: center; }
     .cta-box { position: relative; z-index: 2; background: rgba(255,255,255,0.75); backdrop-filter: blur(4px); padding: 56px 80px; text-align: center; }
@@ -154,8 +132,10 @@
       .hero-logo { width: 120px; }
       .vision { padding: 48px 28px; }
       .vision p { font-size: 20px; }
-      .about { grid-template-columns: 1fr; padding: 40px 28px; gap: 32px; }
-      .about-image { aspect-ratio: 4 / 3; }
+      .about { grid-template-columns: 1fr; }
+      .about-image-wrap { padding: 32px 28px 0; }
+      .about-image { height: 240px; }
+      .about-text { padding: 28px 28px 40px; }
       .about-text h2 { font-size: 34px; }
       .goals { grid-template-columns: 1fr; }
       .goals-left { padding: 40px 28px; }
@@ -164,6 +144,7 @@
       .lookfor { padding: 48px 28px; }
       .lookfor h2 { font-size: 34px; margin-bottom: 32px; }
       .lookfor-grid { grid-template-columns: 1fr; gap: 32px; }
+      .lookfor-text { padding-right: 0; }
       .industries { padding: 24px; }
       .why-brokers-inner { padding: 48px 28px; grid-template-columns: 1fr; gap: 40px; }
       .why-col h2, .broker-col h2 { font-size: 28px; }
