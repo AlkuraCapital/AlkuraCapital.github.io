@@ -46,21 +46,30 @@
     .vision-line { width: 40px; height: 0.5px; background: rgba(255,255,255,0.25); }
     .vision p { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: #fff; line-height: 1.7; max-width: 700px; letter-spacing: 0.03em; font-style: italic; }
 
-    /* ── ABOUT ── */
-    .about { background: #0d1b4b; display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
-    .about-image { width: 100%; height: 100%; min-height: 420px; object-fit: cover; }
-    .about-text { padding: 52px 48px; display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    /* ── ABOUT — contained square image with margins ── */
+    .about {
+      background: #0d1b4b;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; padding: 60px 60px;
+      gap: 60px;
+    }
+    .about-image-wrap { padding: 0; }
+    .about-image {
+      width: 100%; aspect-ratio: 1 / 1;
+      object-fit: cover; display: block;
+    }
+    .about-text { display: flex; flex-direction: column; gap: 18px; }
     .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 4px; }
     .about-text p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.82); font-weight: 300; }
 
-    /* ── GOALS ── */
+    /* ── GOALS — image matches text height ── */
     .goals { position: relative; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
     .goals-bg {
       position: absolute; inset: 0;
       background-image: url('about.jpg');
       background-size: cover; background-position: center; filter: brightness(0.3);
     }
-    .goals-left { position: relative; z-index: 2; padding: 52px 48px; display: flex; flex-direction: column; justify-content: flex-start; }
+    .goals-left { position: relative; z-index: 2; padding: 52px 48px; display: flex; flex-direction: column; }
     .goals-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; color: #fff; margin-bottom: 28px; }
     .goal-item { padding: 16px 0; border-top: 0.5px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; gap: 7px; }
     .goal-item:last-child { border-bottom: 0.5px solid rgba(255,255,255,0.15); }
@@ -68,14 +77,14 @@
     .goal-num { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.15em; }
     .goal-title { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; color: #fff; }
     .goal-body { font-size: 12px; line-height: 1.8; color: rgba(255,255,255,0.65); font-weight: 300; padding-left: 28px; }
-    .goals-right { position: relative; z-index: 2; padding: 52px 48px 52px 0; display: flex; align-items: center; }
-    .goals-right img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .goals-right { position: relative; z-index: 2; padding: 52px 48px 52px 0; display: flex; align-items: stretch; }
+    .goals-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* ── WHAT WE LOOK FOR — dark navy, text left, industries right ── */
+    /* ── WHAT WE LOOK FOR — title left, industries boxed right ── */
     .lookfor { background: #0d1b4b; padding: 72px 60px; }
     .lookfor h2 {
       font-family: 'Cormorant Garamond', serif; font-size: 42px;
-      font-weight: 400; color: #fff; text-align: center; margin-bottom: 48px;
+      font-weight: 400; color: #fff; text-align: left; margin-bottom: 40px;
     }
     .lookfor-grid {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -87,7 +96,10 @@
       margin-bottom: 20px; text-align: left;
     }
     .lookfor-text p:last-child { margin-bottom: 0; }
-    .industries { border-left: 0.5px solid rgba(255,255,255,0.15); padding-left: 48px; }
+    .industries {
+      border: 0.5px solid rgba(255,255,255,0.25);
+      padding: 32px 36px;
+    }
     .industries h3 {
       font-family: 'Cormorant Garamond', serif; font-size: 22px;
       font-weight: 400; color: #fff; margin-bottom: 24px; letter-spacing: 0.04em;
@@ -97,7 +109,7 @@
       font-size: 13px; color: rgba(255,255,255,0.75);
       font-weight: 300; display: flex; align-items: center; gap: 10px;
     }
-    .industries ul li::before { content: '—'; color: rgba(255,255,255,0.3); font-size: 12px; }
+    .industries ul li::before { content: '—'; color: rgba(255,255,255,0.35); font-size: 12px; }
 
     /* ── WHY SELLERS + FOR BROKERS ── */
     .why-brokers { position: relative; overflow: hidden; }
@@ -142,9 +154,8 @@
       .hero-logo { width: 120px; }
       .vision { padding: 48px 28px; }
       .vision p { font-size: 20px; }
-      .about { grid-template-columns: 1fr; }
-      .about-image { min-height: 260px; }
-      .about-text { padding: 40px 28px; }
+      .about { grid-template-columns: 1fr; padding: 40px 28px; gap: 32px; }
+      .about-image { aspect-ratio: 4 / 3; }
       .about-text h2 { font-size: 34px; }
       .goals { grid-template-columns: 1fr; }
       .goals-left { padding: 40px 28px; }
@@ -153,7 +164,7 @@
       .lookfor { padding: 48px 28px; }
       .lookfor h2 { font-size: 34px; margin-bottom: 32px; }
       .lookfor-grid { grid-template-columns: 1fr; gap: 32px; }
-      .industries { border-left: none; padding-left: 0; border-top: 0.5px solid rgba(255,255,255,0.15); padding-top: 32px; }
+      .industries { padding: 24px; }
       .why-brokers-inner { padding: 48px 28px; grid-template-columns: 1fr; gap: 40px; }
       .why-col h2, .broker-col h2 { font-size: 28px; }
       .cta-box { padding: 40px 28px; margin: 0 20px; }
@@ -197,7 +208,9 @@
 
   <!-- ABOUT US -->
   <section class="about" id="about">
-    <img class="about-image" src="about.jpg" alt="Alkura Capital"/>
+    <div class="about-image-wrap">
+      <img class="about-image" src="about.jpg" alt="Alkura Capital"/>
+    </div>
     <div class="about-text">
       <h2>About Us</h2>
       <p>Alkura Capital is a San Diego-based acquisition company focused on essential, people-driven service businesses. We are entrepreneurs and operators, not financial engineers. When we acquire a business, we are committed to its people, its customers, and its continued growth — for the long term.</p>
